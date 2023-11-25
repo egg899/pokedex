@@ -1,0 +1,275 @@
+
+*{
+  padding:0px;
+  margin:0px;
+}
+
+/* body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+} */
+
+body{
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5bbf58a6-1e85-4cfe-83fd-02df6f482b45/de8nlib-6bed7b3d-3d7e-4763-bb60-18f5ee0127fd.png/v1/fill/w_1024,h_652,q_80,strp/background_prairie_pokemon_screencapture_by_nemotrex_de8nlib-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjUyIiwicGF0aCI6IlwvZlwvNWJiZjU4YTYtMWU4NS00Y2ZlLTgzZmQtMDJkZjZmNDgyYjQ1XC9kZThubGliLTZiZWQ3YjNkLTNkN2UtNDc2My1iYjYwLTE4ZjVlZTAxMjdmZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ZVgNGi61AOkC068E-wphWmAUW8amj0MiJySqDcMCVh8');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+#root{
+  width:100%;
+}
+
+
+#container{
+
+ max-width:1200px;
+ width:90%;
+  margin: 0px auto;
+  padding:1rem;
+ 
+  /* text-align:center; */
+}
+
+
+section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.center{margin:20px auto; width:300px;}
+.card {
+  background-color:#ffcc01;
+  margin:20px auto;
+  border:5px solid #395ba7;
+  padding: 2em;
+  width:33%;
+  max-width:320px;
+  min-width:220px;
+  border-radius: 2%;
+  display:inline-grid;
+  grid-template-columns: 15px [comienzo] 1fr 1fr [fin] 15px;
+  grid-template-rows:1fr auto auto 1fr;
+}
+
+.card div{
+  
+  
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+
+
+
+}
+
+
+
+.card div:first-of-type{
+  grid-column:2/4;
+  grid-row: 1 / 2;
+  
+}
+
+.card div:nth-of-type(2){
+  grid-column:2/3;
+  grid-row:2/2;
+
+}
+
+.card div:nth-of-type(3){
+  grid-column: 3/span 1;
+  grid-row: 2/3;
+}
+
+.card div:nth-of-type(4){
+  grid-column:2 span/fin;
+  grid-row:3/4;
+  /* word-break: break-all; */
+  margin: 0 auto;
+}
+
+.card div:nth-of-type(5){
+  grid-column:comienzo/fin;
+  grid-row:5/5;
+  text-align: center;
+}
+
+
+
+.details ul{
+  list-style: none;
+}
+
+img{
+  width:100%;
+  height:auto;
+}
+
+.title{
+  text-transform:lowercase;
+  text-align: center;
+  font-weight: bolder;
+  font-size:1.4rem
+}
+
+.title::first-letter{
+  text-transform: uppercase;
+}
+
+
+#banner{
+  height:20vw;
+  width:100%;
+ margin-right: auto;
+ margin-left: auto;
+ margin-bottom: 40px;
+  max-width: 1000px;
+  min-width:500px;
+ background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png');;
+ background-repeat: no-repeat;
+ background-size:contain;
+ background-position: center center;
+}
+
+
+.title{
+  border-bottom: 2px solid #395ba7;
+  margin-bottom:10px;
+  
+}
+
+.skills ul{
+  margin:0 auto;
+}
+
+
+
+.popup{
+  width:100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.7);
+  
+  
+  position: fixed;
+ top:0;
+ left:0;
+ 
+}
+.popup div:nth-child(1){
+ 
+  position: absolute;
+  
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  
+
+  
+}
+
+
+.popup div:nth-child(1) > .details, .popup div:nth-child(1) img,.popup div:nth-child(1) button {
+margin-top: 25px;
+
+}
+
+
+/* .center{
+  cursor: pointer;
+  
+} */
+
+.center:hover{
+  animation:bounce 0.5s linear;
+  cursor:pointer;
+}
+
+.bounce{
+  animation-name: bounce;
+	-webkit-animation-name: bounce;	
+
+	animation-duration: 2.5s;	
+	-webkit-animation-duration: 2.5s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
+
+	visibility: visible !important;	
+}
+
+
+@keyframes bounce {
+  10% {
+    transform: translateY(-20px);
+  }
+
+  20% {
+    transform: translateY(-10px);
+  }
+  40%{
+    transform:translateY(0px);
+  }
+  80%{
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+/*
+==============================================
+expandUp
+==============================================
+*/
+
+
+.expandUp{
+	animation-name: expandUp;
+	-webkit-animation-name: expandUp;	
+
+	animation-duration: 0.7s;	
+	-webkit-animation-duration: 0.7s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;		
+
+	visibility: visible !important;	
+}
+
+@keyframes expandUp {
+	0% {
+		transform: translateY(100%) scale(0.6) scaleY(0.5);
+	}
+	60%{
+		transform: translateY(-7%) scaleY(1.12);
+	}
+	75%{
+		transform: translateY(3%);
+	}	
+	100% {
+		transform: translateY(0%) scale(1) scaleY(1);
+	}	
+}
+
+@-webkit-keyframes expandUp {
+	0% {
+		-webkit-transform: translateY(100%) scale(0.6) scaleY(0.5);
+	}
+	60%{
+		-webkit-transform: translateY(-7%) scaleY(1.12);
+	}
+	75%{
+		-webkit-transform: translateY(3%);
+	}	
+	100% {
+		-webkit-transform: translateY(0%) scale(1) scaleY(1);
+	}	
+}
